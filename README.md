@@ -1,78 +1,89 @@
-
-# Generative AI Application Development with Docker and Hugging Face
+# Generative AI Text Generation Application with Docker and Hugging Face
 
 ## Overview
 
-This project showcases the development of Generative AI applications using Docker and Hugging Face. The goal is to create containerized applications that utilize state-of-the-art transformer models for various generative tasks, such as text generation, image synthesis, and style transfer.
+This project demonstrates the development of a text generation application using Large Language Models (LLMs) and transformers from Hugging Face. The application is containerized using Docker and features an API built with FastAPI.
 
 ## Features
 
-- **Containerized Applications**: Built using Docker for easy deployment and scalability.
-- **Hugging Face Integration**: Leveraged the Hugging Face Transformers library for advanced AI model functionalities.
-- **User Interface**: Developed interactive user interfaces for seamless interaction with generative models.
-- **Robust Pipeline**: Implemented a robust deployment pipeline for reliable application performance.
-- **Best Practices**: Emphasized modular code architecture, version control, and automated testing.
+- **Text Generation**: Utilizes multiple LLM models from Hugging Face for generating text.
+- **FastAPI**: Provides a robust API for interacting with the generative models.
+- **Dockerized Application**: Ensures easy deployment and scalability.
 
 ## Installation
 
+### Step 1: Build Generative AI Application
+
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/dubeyRock/Generative-AI-Apps.git
-   cd Generative-AI-Apps
+   git clone https://github.com/dubeyRock/Generative-AI-Text-Generation.git
+   cd Generative-AI-Text-Generation
+
+**Install dependencies:**
+
+
+pip install -r requirements.txt
+Run the application:
+
+
+uvicorn main:app --reload
+
+**Step 2: Docker**
 Build the Docker image:
 
-bash
 
-docker build -t generative-ai-app .
+docker build -t generative-ai-text-app .
 Run the Docker container:
 
-bash
 
-docker run -p 5000:5000 generative-ai-app
+docker run -p 8000:8000 generative-ai-text-app
 
-Access the application: Open your web browser and go to http://localhost:5000.
+**step 3: **Hugging Face**
+Integrate Hugging Face models:
+python
 
-##Usage
+from transformers import pipeline
 
-**Text Generation**: Enter a prompt to generate text using the selected model.
+text_generator = pipeline("text-generation", model="gpt2")
+result = text_generator("Hello, world!", max_length=50)
+print(result)
+Usage
+Text Generation Endpoint: Send a POST request to /generate-text with a JSON body containing the prompt.
 
-**Image Synthesis**: Upload an image to generate variations or apply style transfer.
+curl -X POST "http://localhost:8000/generate-text" -H "Content-Type: application/json" -d '{"prompt": "Hello, world!"}'
 
-**Interactive Features**: Utilize the user interface to explore different functionalities and models.
-
-##Technologies Used
-
+**technologies Used**
 Python
+
+FastAPI
 
 Docker
 
 Hugging Face Transformers
 
-Flask (or other web frameworks, depending on your implementation)
+Uvicorn
 
-Machine learning.
+**contributing**
 
-##Contributing
+Contributions are welcome! Please create an issue or submit a pull request.
 
-Contributions are welcome! If you have suggestions or improvements, please create an issue or submit a pull request.
-
-License
+**License**
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgments
-Hugging Face for providing the transformer models and libraries.
-Docker for containerization solutions.
-Flask for the web framework.
-#output deployment screenshot 
-##(1)
+**Contact**
+For any questions or feedback, reach out to me at shivvam2002@gmail.com or connect with me on LinkedIn.
+
+
+**output deployment screenshot**
+**(1)**
 ![image](https://github.com/user-attachments/assets/16a5587c-fa2a-4c85-a7c7-115ba184f74b)
 
 ![image](https://github.com/user-attachments/assets/b25882aa-21da-4275-a82e-e0241cc32c92)
 
-##(2)
+**(2)**
 ![image](https://github.com/user-attachments/assets/10832ab4-9dd3-49b7-82df-bfb91e7499fd)
 ![image](https://github.com/user-attachments/assets/26a2faed-66ec-4884-8a34-66c911ad21e3)
 
-deployment link - 
+**deployment link -**
 
 https://shivam9022-text2textwithdocker.hf.space/docs#/default/generate_generate_get
