@@ -1,29 +1,4 @@
-# Generative AI Application Development with Docker and Hugging Face
 
-## Overview
-
-This project showcases the development of Generative AI applications using Docker and Hugging Face. The goal is to create containerized applications that utilize state-of-the-art transformer models for various generative tasks, such as text generation, image synthesis, and style transfer.
-
-## Features
-
-- **Containerized Applications**: Built using Docker for easy deployment and scalability.
-- **Hugging Face Integration**: Leveraged the Hugging Face Transformers library for advanced AI model functionalities.
-- **User Interface**: Developed interactive user interfaces for seamless interaction with generative models.
-- **Robust Pipeline**: Implemented a robust deployment pipeline for reliable application performance.
-- **Best Practices**: Emphasized modular code architecture, version control, and automated testing.
-
-## Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/dubeyRock/Generative-AI-Apps.git
-   cd Generative-AI-Apps
-
-Memory updated
-Here’s the updated README file with your GitHub username and a mention for your LinkedIn profile:
-
-markdown
-Copy code
 # Generative AI Application Development with Docker and Hugging Face
 
 ## Overview
