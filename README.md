@@ -57,19 +57,28 @@ docker run -p 5000:5000 generative-ai-app
 
 Access the application: Open your web browser and go to http://localhost:5000.
 
-Usage
-Text Generation: Enter a prompt to generate text using the selected model.
-Image Synthesis: Upload an image to generate variations or apply style transfer.
-Interactive Features: Utilize the user interface to explore different functionalities and models.
+##Usage
+
+**Text Generation**: Enter a prompt to generate text using the selected model.
+
+**Image Synthesis**: Upload an image to generate variations or apply style transfer.
+
+**Interactive Features**: Utilize the user interface to explore different functionalities and models.
 
 ##Technologies Used
+
 Python
+
 Docker
+
 Hugging Face Transformers
+
 Flask (or other web frameworks, depending on your implementation)
+
 Machine learning.
 
 ##Contributing
+
 Contributions are welcome! If you have suggestions or improvements, please create an issue or submit a pull request.
 
 License
